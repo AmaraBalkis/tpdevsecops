@@ -31,23 +31,14 @@ jobs:
       - name: Run Gitleaks scan
         uses: zricethezav/gitleaks-action@v2
         with:
-          format: json
-          output: reports/gitleaks-report.json
           path: .
-          verbose: true
-          # important: forcer la sortie même si aucun secret
-          redacted: false
-
-      - name: List files
-        run: ls -la
-
 
       # Upload du rapport Gitleaks
       - name: Upload Gitleaks report
         uses: actions/upload-artifact@v4
         with:
           name: gitleaks-report
-          path: gitleaks-report.json
+          path: results.sarif
 
 
       # Vérifier si des secrets ont été détectés et échouer le pipeline
