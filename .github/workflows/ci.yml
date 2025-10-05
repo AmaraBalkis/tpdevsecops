@@ -33,7 +33,10 @@ jobs:
         with:
           format: json
           output: reports/gitleaks-report.json
-          config: ''
+          path: .
+          verbose: true
+          # important: forcer la sortie même si aucun secret
+          redacted: false
 
       - name: List files
         run: ls -la
