@@ -32,8 +32,7 @@ jobs:
         uses: zricethezav/gitleaks-action@v2
         with:
           format: json
-          output: gitleaks-report.json
-          path: .
+          output: reports/gitleaks-report.json
 
       # Upload du rapport Gitleaks
       - name: Upload Gitleaks report
