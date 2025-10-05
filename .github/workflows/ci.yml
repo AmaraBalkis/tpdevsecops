@@ -30,8 +30,7 @@ jobs:
        # Gitleaks scan (avant compilation)
       - name: Run Gitleaks scan
         uses: zricethezav/gitleaks-action@v2
-        with:
-          path: .
+       
 
       # Upload du rapport Gitleaks
       - name: Upload Gitleaks report
