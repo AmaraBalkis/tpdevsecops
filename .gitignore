@@ -1,0 +1,10 @@
+# Maven target folder
+/target/
+
+# Logs
+*.log
+
+# Docker
+*.tar
+docker-compose.override.yml
+

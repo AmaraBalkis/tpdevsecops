@@ -1,18 +1,14 @@
-# Use Python image
-FROM python:3.11-slim
+# Utilise l'image Java officielle
+FROM eclipse-temurin:21-jdk-jammy
 
-# Set working directory
-WORKDIR /apptest
+# Crée un dossier pour l'application
+WORKDIR /app
 
-# Copy files
-COPY requirements.txt .
-COPY apptest.py .
+# Copie le jar compilé dans le conteneur
+COPY target/democyber-0.0.1-SNAPSHOT.jar app.jar
 
-# Install dependencies
-RUN pip install --no-cache-dir -r requirements.txt
+# Expose le port 8080
+EXPOSE 8080
 
-# Expose port
-EXPOSE 5000
-
-# Run the app
-CMD ["python", "apptest.py"]
+# Commande pour lancer l'application
+ENTRYPOINT ["java","-jar","app.jar"]
