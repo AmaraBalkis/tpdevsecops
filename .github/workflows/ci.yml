@@ -33,13 +33,18 @@ jobs:
         with:
           format: json
           output: reports/gitleaks-report.json
+          config: ''
+
+      - name: List files
+        run: ls -la
+
 
       # Upload du rapport Gitleaks
       - name: Upload Gitleaks report
         uses: actions/upload-artifact@v4
         with:
           name: gitleaks-report
-          path: reports/gitleaks-report.json
+          path: gitleaks-report.json
 
 
       # Vérifier si des secrets ont été détectés et échouer le pipeline
