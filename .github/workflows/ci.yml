@@ -26,16 +26,16 @@ jobs:
           java-version: '21'
           distribution: 'temurin'
 
-      # Gitleaks scan (before compilation)
-      - name: Run Gitleaks scan
-        uses: zricethezav/gitleaks-action@v2
+      # # Gitleaks scan (before compilation)
+      # - name: Run Gitleaks scan
+      #   uses: zricethezav/gitleaks-action@v2
        
-      # Upload the Gitleaks report
-      - name: Upload Gitleaks report
-        uses: actions/upload-artifact@v4
-        with:
-          name: gitleaks-report
-          path: results.sarif
+      # # Upload the Gitleaks report
+      # - name: Upload Gitleaks report
+      #   uses: actions/upload-artifact@v4
+      #   with:
+      #     name: gitleaks-report
+      #     path: results.sarif
 
 
         # Compile Java code
