@@ -79,6 +79,7 @@ jobs:
         with:
           image-ref: democyber:latest
           format: 'json'
+          output: 'trivy-report.json'
           exit-code: '0'   # fail if critical issues found
           severity: 'CRITICAL,HIGH'
       - name: Upload Trivy report
