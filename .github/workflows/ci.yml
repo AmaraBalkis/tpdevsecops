@@ -82,7 +82,7 @@ jobs:
           exit-code: '0'   # fail if critical issues found
           severity: 'CRITICAL,HIGH'
       - name: Upload Trivy report
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: trivy-report
           path: trivy-report.json
