@@ -26,8 +26,7 @@ jobs:
           java-version: '21'
           distribution: 'temurin'
 
-
-       # Gitleaks scan (avant compilation)
+        # Gitleaks scan (avant compilation)
       - name: Run Gitleaks scan
         uses: zricethezav/gitleaks-action@v2
        
@@ -79,3 +78,9 @@ jobs:
       # #  Push Docker image sur Docker Hub
       # - name: Push Docker image
       #   run: docker push $DOCKER_IMAGE_NAME
+
+
+
+
+# git config --global user.name "Votre Nom"
+# git config --global user.email "votre.email@example.com"
