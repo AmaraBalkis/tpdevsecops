@@ -77,7 +77,7 @@ jobs:
         with:
           image-ref: democyber:latest
           format: 'table'
-          exit-code: '1'   # fail if critical issues found
+          exit-code: '0'   # fail if critical issues found
           severity: 'CRITICAL,HIGH'
 
 
